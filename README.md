@@ -1,7 +1,14 @@
-NodeJS library implementing an EventEmitter to connect to eWeLink Cloud.
+#NodeJS library implementing an EventEmitter to connect to eWeLink Cloud.
 
+##Installing
+
+```
 npm i --save node-ewelink-cloud
+```
 
+##Usage
+
+```
 var eWeLink = require('node-ewelink-cloud');
 
 var connection = new eWeLink({
@@ -11,7 +18,7 @@ var connection = new eWeLink({
     "password" : "your_login_password",
     "imei" : "GENERATE AN IMEI"
 });
-
+```
 connection.on(/state:.*/, (event) => {
   console.log(event.type, event.data);
 }
