@@ -22,5 +22,7 @@ var connection = new eWeLink({
 connection.on(/state:.*/, (event) => {
   console.log(event.type, event.data);
 }
+
+connection.setData(deviceId,{"switch":"off"});
 ```
 
